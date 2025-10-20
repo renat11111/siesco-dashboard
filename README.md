@@ -1,19 +1,60 @@
-# README
+# Siesco Dashboard
 
-## About
+## О проекте
 
-This is the official Wails React template.
+Siesco Dashboard — это настольное приложение для мониторинга финансовых показателей в реальном времени. Оно подключается к вашей системе "1С" и отображает данные об остатках на банковских счетах и в кассах в виде наглядных диаграмм.
 
-You can configure the project by editing `wails.json`. More information about the project settings can be found
-here: https://wails.io/docs/reference/project-config
+## Возможности
 
-## Live Development
+*   **Визуализация данных:** Просмотр остатков денежных средств и банковских счетов в виде круговых диаграмм.
+*   **Обновление в реальном времени:** Автоматическое обновление данных каждые 60 секунд.
+*   **Кроссплатформенность:** Работает на Windows, macOS и Linux.
 
-To run in live development mode, run `wails dev` in the project directory. This will run a Vite development
-server that will provide very fast hot reload of your frontend changes. If you want to develop in a browser
-and have access to your Go methods, there is also a dev server that runs on http://localhost:34115. Connect
-to this in your browser, and you can call your Go code from devtools.
+## Технологии
 
-## Building
+*   **Бэкенд:** Go, Wails v2
+*   **Фронтенд:** React, Vite, Chart.js
 
-To build a redistributable, production mode package, use `wails build`.
+## Начало работы
+
+### Необходимые условия
+
+*   Go (версия 1.21 и выше)
+*   Node.js (версия 16 и выше)
+*   Wails CLI
+
+### Установка
+
+1.  Клонируйте репозиторий:
+    ```sh
+    git clone https://github.com/Renat11111/Siesco-Dashboard.git
+    ```
+2.  Перейдите в каталог проекта:
+    ```sh
+    cd Siesco-Dashboard
+    ```
+3.  Установите зависимости для фронтенда:
+    ```sh
+    cd frontend
+    npm install
+    cd ..
+    ```
+
+### Конфигурация
+
+1.  Создайте файл `.env` в корневом каталоге проекта.
+2.  Добавьте в него следующие переменные для доступа к вашему сервису "1С":
+
+    ```
+    HTTP_USERNAME=ваш_логин
+    HTTP_PASSWORD=ваш_пароль
+    DB_NAME=имя_вашей_базы_данных
+    ```
+
+## Разработка
+
+Для запуска в режиме реального времени выполните `wails dev` в каталоге проекта. Это запустит сервер разработки Vite, который обеспечит быструю горячую перезагрузку изменений вашего фронтенда.
+
+## Сборка
+
+Для сборки готового к распространению пакета в рабочем режиме используйте `wails build`.
