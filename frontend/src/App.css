@@ -1,0 +1,42 @@
+#App {
+    padding: 2rem;
+}
+
+.header-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    min-height: 20px; /* Prevent layout shift */
+}
+
+.refreshing-indicator {
+    font-style: italic;
+    color: #888;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+.charts-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.chart-container {
+    position: relative;
+    width: 45%; /* Each chart takes up roughly half the space */
+    height: 40vh; /* Maintain a consistent height */
+}
